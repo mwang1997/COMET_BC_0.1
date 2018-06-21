@@ -7,8 +7,10 @@ node::node(int i, int e) {
 	next = NULL;
 }
 
- node node::getNext() {
-	return *next;
+/*Getters and Setters*/
+
+ node * node::getNext() {
+	return next;
 }
 
  int node::getIndex() {

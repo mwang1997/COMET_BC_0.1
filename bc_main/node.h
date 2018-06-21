@@ -10,14 +10,12 @@ public:
 	node(int, int);
 
 	/*Getters and Setters*/
-	node getNext();
+	node * getNext();
 
 	int getIndex();
 
 	int getElement();
 
 	void setNext(node * n);
-
-
 
 };
