@@ -1,26 +1,39 @@
 #include "stdafx.h"
 #include "node.h"
 
-node::node(int i, int e) {
+/*Parent Node*/
+
+p_node::p_node(int i) {
 	index = i;
-	element = e;
 	next = NULL;
 }
 
 /*Getters and Setters*/
 
- node * node::getNext() {
+ p_node * p_node::getNext() {
 	return next;
 }
 
- int node::getIndex() {
+ int p_node::getIndex() {
 	 return index;
  }
 
- int node::getElement() {
+ void p_node::setNext(p_node * n) {
+	 next = n;
+ }
+
+ /*Transaction Node*/
+
+ t_node::t_node(int i, int e) : p_node(i) {
+	 element = e;
+ }
+
+ int t_node::getElement() {
 	 return element;
  }
 
- void node::setNext(node * n) {
-	 next = n;
+ /*Structure Node*/
+
+ s_node::s_node(int i, b_node * e) : p_node(i) {
+	 element = e;
  }

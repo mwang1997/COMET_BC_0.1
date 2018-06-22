@@ -8,7 +8,7 @@ private:
 
 
 public:
-	void f(int);
+	void f(p_node *);
 
 	LinkedList getItem();
 

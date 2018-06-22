@@ -4,14 +4,14 @@
 
 class LinkedList {
 private:
-	node head;
-	node * tail;
-	node * current;
+	p_node head;
+	p_node * tail;
+	p_node * current;
 
 	/*Getters and Setters*/
-	void setTail(node * n);
+	void setTail(p_node * n);
 
-	void setCurrent(node * n);
+	void setCurrent(p_node * n);
 
 public:
 

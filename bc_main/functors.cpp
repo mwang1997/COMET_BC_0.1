@@ -1,9 +1,7 @@
 #include "stdafx.h"
 #include "functors.h"
 
-class LinkedList;
-
-void MerkleFunctor::f(int e) {
+void MerkleFunctor::f(p_node *) {
 	
 }
 
