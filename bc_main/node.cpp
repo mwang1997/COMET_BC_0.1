@@ -37,3 +37,7 @@ p_node::p_node(int i) {
  s_node::s_node(int i, b_node * e) : p_node(i) {
 	 element = e;
  }
+
+ b_node * s_node::getElement() {
+	 return element;
+ }

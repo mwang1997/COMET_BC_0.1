@@ -4,13 +4,20 @@
 
 class MerkleFunctor : public functor {
 private:
-	LinkedList l;
+	LinkedList * list = NULL;
+	b_node * temp = NULL;
 
 
 public:
-	void f(p_node *);
+	MerkleFunctor(LinkedList *);
 
-	LinkedList getItem();
+	void f(s_node *);
 
+	void f(t_node *);
 
+	/*Getters and Setters*/
+
+	LinkedList * getItem();
+
+	void setItem(LinkedList *);
 };

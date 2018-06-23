@@ -31,7 +31,7 @@ public:
 	int getElement();
 };
 
-class s_node : p_node {
+class s_node : public p_node {
 private:
 	b_node * element;
 

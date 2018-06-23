@@ -20,6 +20,11 @@ public:
 
 	/*Public Functions*/
 	void add(int element);
+		
+	void add(b_node *);
 
 	void traverse(functor * f);
+
+	/*Getters and Setters*/
+	p_node * getLast();
 };

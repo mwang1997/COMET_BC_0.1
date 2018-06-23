@@ -1,11 +1,16 @@
 #include "stdafx.h"
 #include "LinkedList.h"
 #include "functor.h"
+#include "MerkleTree.h"
 #include <iostream>
 
 LinkedList::LinkedList() : head(-1) {
 	tail = &head;
 	current = &head;
+}
+
+p_node * LinkedList::getLast() {
+	return tail;
 }
 
 void LinkedList::setTail(p_node * n) {
@@ -17,7 +22,12 @@ void LinkedList::setCurrent(p_node * n) {
 }
 void LinkedList::add(int element) {
 	t_node * n = new t_node(tail->getIndex() + 1, element);
-	std::cout << n->getElement() << "\n";
+	tail->setNext(n);
+	this->setTail(n);
+}
+
+void LinkedList::add(b_node * element) {
+	s_node * n = new s_node(tail->getIndex() + 1, element);
 	tail->setNext(n);
 	this->setTail(n);
 }

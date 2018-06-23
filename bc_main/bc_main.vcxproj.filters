@@ -53,5 +53,8 @@
     <ClCompile Include="functors.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MerkleTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
