@@ -1,30 +1,25 @@
 #pragma once
-#include "node.h"
-#include "functor.h"
+#include "ll_node.h"
 
-class LinkedList {
+template <class T> class LinkedList {
 private:
-	p_node head;
-	p_node * tail;
-	p_node * current;
-
-	/*Getters and Setters*/
-	void setTail(p_node * n);
-
-	void setCurrent(p_node * n);
+	ll_node<T> head;
+	ll_node<T> * tail;
 
 public:
-
-	/*Constructors*/
 	LinkedList();
 
-	/*Public Functions*/
-	void add(int element);
-		
-	void add(b_node *);
-
-	void traverse(functor * f);
-
-	/*Getters and Setters*/
-	p_node * getLast();
+	void add(T element);
 };
+
+template <class T> LinkedList<T>::LinkedList() : head(-1, NULL) {
+	tail = &head;
+}
+
+template <class T> void LinkedList<T>::add(T element) {
+	ll_node<T> * node = new ll_node<T>(tail->getIndex() + 1, element);
+	tail->setNext(node);
+	tail = node;
+}
+
+
