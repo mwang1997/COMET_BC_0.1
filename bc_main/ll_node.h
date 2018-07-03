@@ -45,4 +45,3 @@ template <class T> void ll_node<T>::setNext(ll_node<T> * n) {
 	next = n;
 }
 
-#pragma once
