@@ -14,5 +14,5 @@ public:
 	void calculate();
 
 	/*Getters and Setters*/
-	void getList();
+	LinkedList<b_node *> getList();
 };

@@ -23,6 +23,7 @@ void block::calculate() {
 		}
 
 		p->setChild(n);
+		n = transactions.traverse();
 	}
 
 	l2 = l1;
@@ -41,6 +42,7 @@ void block::calculate() {
 			}
 
 			p->setChild(n);
+			n = l2->traverse();
 		}
 
 		l2 = l1;
@@ -48,4 +50,8 @@ void block::calculate() {
 	}
 
 	head = l1->traverse();
+}
+
+LinkedList<b_node *> block::getList() {
+	return transactions;
 }
