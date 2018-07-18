@@ -49,7 +49,7 @@ void block::calculate() {
 		l1 = new LinkedList<b_node *>;
 	}
 
-	head = l1->traverse();
+	head = l2->traverse();
 }
 
 LinkedList<b_node *> block::getList() {
