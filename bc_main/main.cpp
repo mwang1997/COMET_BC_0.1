@@ -27,7 +27,10 @@ int main() {
 	s.push_back("the quick brown fox skips the hog ");
 	s.push_back("stop writing random characters ");
 
-	std::cout << sha.process(s);
+	LinkedList<std::bitset<512>> * l = &(sha.process(s));
+
+	std::cout << l->traverse().to_string() << '\n' << l->traverse().to_string() << '\n' << l->traverse().to_string();
+
 
 	return 0;
 
